@@ -1,7 +1,7 @@
+import { Param } from '@nestjs/common';
 import {
   OnGatewayConnection,
   OnGatewayDisconnect,
-  OnGatewayInit,
   SubscribeMessage,
   WebSocketGateway,
   WebSocketServer,
@@ -15,19 +15,18 @@ import { GameService } from './game.service';
   },
 })
 
-export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect, OnGatewayInit {
-  @WebSocketServer()
-  server: Server;
+export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
+
   constructor(
     private readonly gameService: GameService,
   ) { }
 
-  afterInit() {
-    this.gameService.setGameData(this.server);
-  }
+  @WebSocketServer()
+  server: Server;
 
-  handleConnection(socket: Socket) {
-    this.gameService.handleConnection(socket);
+  handleConnection(socket: Socket, token: any) {
+    console.log("gateway token", token);
+    this.gameService.handleConnection(socket, token);
   }
 
   handleDisconnect(socket: Socket) {
@@ -36,7 +35,13 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect, On
 
   @SubscribeMessage('match-request')
   matchRequest(socket: Socket, data: any): void {
-    this.gameService.matchRequest(socket, data);
+    // console.log("match-request");
+    this.gameService.matchRequest(socket, data, this.server);
+  }
+
+  @SubscribeMessage('match-cancel')
+  matchCancel(socket: Socket): void {
+    this.gameService.matchCancel();
   }
 
   @SubscribeMessage('spectate-request')
@@ -46,7 +51,7 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect, On
 
   @SubscribeMessage('gamelist-request')
   gamelistRequest(): any {
-    return this.gameService.gamelistRequest();
+    return { channelList: this.gameService.gamelistRequest() };
   }
 
   @SubscribeMessage('change-password')
@@ -54,9 +59,9 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect, On
     return this.gameService.changePassword(data);
   }
 
-  @SubscribeMessage('submit-password')
+  @SubscribeMessage('spectate-password')
   submitPassword(socket: Socket, data: any): boolean {
-    return this.gameService.submitPassword(data);
+    return this.gameService.spectatePassword(data);
   }
 
   @SubscribeMessage('get-ping')

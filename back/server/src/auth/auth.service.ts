@@ -30,14 +30,14 @@ export class AuthService {
 	static tokens = new Map();
 
 	async getAccessToken(code: string): Promise<string> {
-		console.log('code=', code);
+		// console.log('code=', code);
 		const payload = {
 			grant_type: 'authorization_code',
 			client_id:
-				'10fd003cd72e573d39cefc1302e9a5c3a9722ad06f7bffe91bf3b3587ace5036',
+				'afc0a3e907f953c39d371c4fee3fd72b29b320fbf95da01448b787745a0e066c',
 			client_secret:
-				'813cf74e92c49fd3c4afadf409bd6eb818fe985a11aefbfb4579bfcf0c032d96',
-			redirect_uri: 'http://10.19.236.57:3000/oauth/login',
+				'8544bc761488453b2490234506f3ae5e6b060298583f7ff32b0a2c4a8a2b357a',
+			redirect_uri: 'http://10.19.226.233:3000/oauth/login',
 			code,
 		};
 
@@ -91,9 +91,9 @@ export class AuthService {
 	}
 
 	async saveAccessToken(@Res() response: Response, code: string) {
-		console.log('saveAccessToken');
+		// console.log('saveAccessToken');
 		const newUser: CreateUserDto = await this.getUserData(code);
-		console.log(newUser);
+		// console.log(newUser);
 		if (!newUser) {
 			throw new HttpException('Invalid User', HttpStatus.BAD_REQUEST);
 		}
@@ -109,6 +109,7 @@ export class AuthService {
 				avatar: newUser.avatar,
 				status: 'online',
 				channel_id: '0',
+				socket_id: null,
 				stats: new Stat(),
 				is_second_auth: false,
 			};
@@ -117,17 +118,27 @@ export class AuthService {
 		}
 		AuthService.tokens.set(newUser.access_token, user.intra_id);
 		return response.redirect(
-			'http://localhost:3000' + '?token=' + newUser.access_token,
+			'http://10.19.233.86:3000' + '?token=' + newUser.access_token,
 		);
 	}
 
 	async getUserNickByToken(token: string): Promise<string> {
 		const user = AuthService.tokens.get(token);
+		console.log("@@@@ token: ", token);
+		console.log("@@@@ user: ", user);
+		if (user === undefined) {
+			return;
+		}
 		const userFind = await this.userRepository.findOne({
 			where: {
-				intra_id: user,
+				nickname: user,
 			},
 		});
+
+		if (userFind == undefined) {
+			return undefined;
+		}
+		console.log(".nickname: ", userFind.nickname);
 		return userFind.nickname;
 	}
 
