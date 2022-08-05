@@ -1,17 +1,21 @@
 import io from 'socket.io-client';
 import { useEffect } from 'react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import { myDataState } from 'utils/recoil/myData';
-import { myData } from 'types/myDataTypes';
-import { loginState } from 'utils/recoil/login';
-import { errorState } from 'utils/recoil/error';
 import Nav from 'components/layout/Nav';
 import Side from 'components/layout/Side';
-import instance from 'utils/axios';
 import SecondAuth from 'pages/SecondAuth';
+import instance from 'utils/axios';
+import { myDataState } from 'utils/recoil/myData';
+import { loginState } from 'utils/recoil/login';
+import { errorState } from 'utils/recoil/error';
 import { modalState } from 'utils/recoil/modal';
-import { inviteType } from 'types/GameTypes';
 import { inviteState } from 'utils/recoil/gameState';
+import { myData } from 'types/myDataTypes';
+import { inviteType } from 'types/GameTypes';
+<<<<<<< HEAD
+import { errorType } from 'types/errorTypes';
+=======
+>>>>>>> 857b03e ([Fix - Front] import 및 함수 순서 정리)
 import 'styles/layout/Content.css';
 
 export let socket = io();
@@ -22,40 +26,21 @@ type LayoutProps = {
 
 function Layout({ children }: LayoutProps) {
   const [myData, setMyData] = useRecoilState<myData>(myDataState);
-  const setIsLoggedIn = useSetRecoilState(loginState);
   const [errorMessage, setErrorMessage] = useRecoilState(errorState);
+  const setIsLoggedIn = useSetRecoilState(loginState);
   const setModalInfo = useSetRecoilState(modalState);
   const setInviteData = useSetRecoilState<inviteType>(inviteState);
-
-  useEffect(() => {
-    if (socket.connected === false) {
-      socket = io(
-        `${process.env.REACT_APP_SERVERIP}?token=${window.localStorage.getItem(
-          'trans-token'
-        )}`
-      );
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!window.localStorage.getItem('trans-token')) {
-      window.location.reload();
-    }
-  }, [socket]);
-
-  useEffect(() => {
-    getMyData();
-    socket.on('together-request', (data) => {
-      setInviteData(data);
-      setModalInfo({ modalName: 'GAME-ACCEPT' });
-    });
-  }, []);
 
   const getMyData = async () => {
     try {
       const res = await instance.get(`/users/navi`);
       setMyData(res?.data);
+<<<<<<< HEAD
+    } catch (err) {
+      const e = err as errorType;
+=======
     } catch (e: any) {
+>>>>>>> 7d3b217 ([Fix - Front] useEffect 의존성 배열 삭제 및 통합)
       if (e.message === `Network Error`) {
         setErrorMessage('E500');
       } else if (e.response.status === 403) {
@@ -66,6 +51,27 @@ function Layout({ children }: LayoutProps) {
       } else setErrorMessage('NV01');
     }
   };
+
+  useEffect(() => {
+    if (socket.connected === false) {
+      socket = io(
+        `${process.env.REACT_APP_SERVERIP}?token=${window.localStorage.getItem(
+          'trans-token'
+        )}`
+      );
+    }
+    getMyData();
+    socket.on('together-request', (data) => {
+      setInviteData(data);
+      setModalInfo({ modalName: 'GAME-ACCEPT' });
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!window.localStorage.getItem('trans-token')) {
+      window.location.reload();
+    }
+  }, [socket]);
 
   return myData?.isSecondAuth ? (
     <div>
