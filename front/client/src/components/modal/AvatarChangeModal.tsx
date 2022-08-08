@@ -12,6 +12,7 @@ function AvatarChangeModal() {
   const [myData, setMyData] = useRecoilState(myDataState);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const setProfileData = useSetRecoilState(profileState);
   const setModalInfo = useSetRecoilState(modalState);
   const setErrorMessage = useSetRecoilState(errorState);
@@ -34,6 +35,14 @@ function AvatarChangeModal() {
   const [isChange, setIsChange] = useState<boolean>();
   const [previewImg, setPreviewImg] = useState(myData.avatar);
 >>>>>>> 857b03e ([Fix - Front] import 및 함수 순서 정리)
+=======
+  const setProfileData = useSetRecoilState(profileState);
+  const setModalInfo = useSetRecoilState(modalState);
+  const setErrorMessage = useSetRecoilState(errorState);
+  const [postImg, setPostImg] = useState<FormData>();
+  const [isChange, setIsChange] = useState<boolean>();
+  const [previewImg, setPreviewImg] = useState(myData.avatar);
+>>>>>>> 7d3b217b34a740e26556923abda15016cd9b169b
 
   const closeModal = () => {
     setModalInfo({ modalName: null });

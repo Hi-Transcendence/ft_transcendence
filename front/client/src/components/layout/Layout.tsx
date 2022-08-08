@@ -13,9 +13,12 @@ import { inviteState } from 'utils/recoil/gameState';
 import { myData } from 'types/myDataTypes';
 import { inviteType } from 'types/GameTypes';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { errorType } from 'types/errorTypes';
 =======
 >>>>>>> 857b03e ([Fix - Front] import 및 함수 순서 정리)
+=======
+>>>>>>> 7d3b217b34a740e26556923abda15016cd9b169b
 import 'styles/layout/Content.css';
 
 export let socket = io();
@@ -36,11 +39,15 @@ function Layout({ children }: LayoutProps) {
       const res = await instance.get(`/users/navi`);
       setMyData(res?.data);
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (err) {
       const e = err as errorType;
 =======
     } catch (e: any) {
 >>>>>>> 7d3b217 ([Fix - Front] useEffect 의존성 배열 삭제 및 통합)
+=======
+    } catch (e: any) {
+>>>>>>> 7d3b217b34a740e26556923abda15016cd9b169b
       if (e.message === `Network Error`) {
         setErrorMessage('E500');
       } else if (e.response.status === 403) {

@@ -4,9 +4,12 @@ import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
 import { socket } from 'components/layout/Layout';
 import { userData } from 'types/userTypes';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { errorType } from 'types/errorTypes';
 =======
 >>>>>>> 857b03e ([Fix - Front] import 및 함수 순서 정리)
+=======
+>>>>>>> 7d3b217b34a740e26556923abda15016cd9b169b
 import instance from 'utils/axios';
 import { modalState } from 'utils/recoil/modal';
 import { myDataState } from 'utils/recoil/myData';

@@ -76,6 +76,7 @@ function GameModule(props: { gameMode: string }) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const canvas = useRef<HTMLCanvasElement>(null);
   const background = useRef<HTMLCanvasElement>(null);
@@ -85,6 +86,8 @@ function GameModule(props: { gameMode: string }) {
 >>>>>>> 1adf8e3 ([Fix - Front] any 타입 변경)
 =======
 >>>>>>> 857b03e ([Fix - Front] import 및 함수 순서 정리)
+=======
+>>>>>>> 7d3b217b34a740e26556923abda15016cd9b169b
   useEffect(() => {
     const canvasEle = background.current!;
     const ctx = canvasEle.getContext('2d')!;
@@ -92,11 +95,14 @@ function GameModule(props: { gameMode: string }) {
     draw_background(ctx, canvasEle.width, canvasEle.height, props.gameMode);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }, []);
 >>>>>>> 1adf8e3 ([Fix - Front] any 타입 변경)
 =======
 >>>>>>> 7d3b217 ([Fix - Front] useEffect 의존성 배열 삭제 및 통합)
+=======
+>>>>>>> 7d3b217b34a740e26556923abda15016cd9b169b
 
     socket.on('count-down', (data) => {
       setCountData(data);

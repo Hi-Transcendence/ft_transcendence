@@ -12,6 +12,7 @@ function FriendTable() {
   const setFriend = useSetRecoilState(friendState);
   const [list, setList] = useState<friendList | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   useEffect(() => {
@@ -20,6 +21,8 @@ function FriendTable() {
     socket.emit('friend-start', profileData.nickName);
   }, []);
 >>>>>>> 857b03e ([Fix - Front] import 및 함수 순서 정리)
+=======
+>>>>>>> 7d3b217b34a740e26556923abda15016cd9b169b
 
   useEffect(() => {
 =======

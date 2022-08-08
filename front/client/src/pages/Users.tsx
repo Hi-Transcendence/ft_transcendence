@@ -9,9 +9,12 @@ import { profileState } from 'utils/recoil/profileData';
 import { loginState } from 'utils/recoil/login';
 import { errorState } from 'utils/recoil/error';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { errorType } from 'types/errorTypes';
 =======
 >>>>>>> 857b03e ([Fix - Front] import 및 함수 순서 정리)
+=======
+>>>>>>> 7d3b217b34a740e26556923abda15016cd9b169b
 import 'styles/users/MyPage.css';
 
 function UserPage() {

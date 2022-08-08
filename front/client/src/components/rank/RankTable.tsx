@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSetRecoilState } from 'recoil';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import RankRow from 'components/rank/RankRow';
@@ -22,6 +23,14 @@ import { loginState } from 'utils/recoil/login';
 import { errorState } from 'utils/recoil/error';
 =======
 >>>>>>> 857b03e ([Fix - Front] import 및 함수 순서 정리)
+=======
+import RankRow from 'components/rank/RankRow';
+import RankTitleRow from 'components/rank/RankTitleRow';
+import { rankRowType, userRank } from 'types/RankTypes';
+import instance from 'utils/axios';
+import { loginState } from 'utils/recoil/login';
+import { errorState } from 'utils/recoil/error';
+>>>>>>> 7d3b217b34a740e26556923abda15016cd9b169b
 
 function RankTable() {
   const setIsLoggedIn = useSetRecoilState(loginState);

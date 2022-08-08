@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { matchList } from 'types/profileTypes';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { errorType } from 'types/errorTypes';
 =======
 >>>>>>> 857b03e ([Fix - Front] import 및 함수 순서 정리)
+=======
+>>>>>>> 7d3b217b34a740e26556923abda15016cd9b169b
 import instance from 'utils/axios';
 import { profileState } from 'utils/recoil/profileData';
 import { errorState } from 'utils/recoil/error';
