@@ -32,33 +32,40 @@ function Nav(props: { nickName: string; avatar: string }) {
   return (
     <div>
       <header className='nav'>
+        <div className='flex1'>
         <Link to='/'>
           <span
             className='navButton home'
             onClick={movePage}>
-              홈
+            홈
           </span>
         </Link>
-        <span
-          className='navButton'
-          onClick={() => setModalInfo({ modalName: 'LOGOUT' })}>
-          로그아웃
-        </span>
-        <Link to={`/users/${props.nickName}/mypage`}>
+        </div>
+        <div className='flex2'></div>
+        
+        <div className='flex3'>
           <span
             className='navButton'
-            onClick={movePage}>
-          마이페이지</span>
-        </Link>
-        <Link to='/ranking'>
+            onClick={() => setModalInfo({ modalName: 'GUIDE' })}>
+            가이드
+          </span>
+          <Link to='/ranking'>
+            <span
+              className='navButton'
+              onClick={movePage}>랭킹</span>
+          </Link>
+          <Link to={`/users/${props.nickName}/mypage`}>
+            <span
+              className='navButton'
+              onClick={movePage}>
+              마이페이지</span>
+          </Link>
           <span
             className='navButton'
-            onClick={movePage}>랭킹</span>
-        </Link>
-        <span
-          className='navButton'
-          onClick={() => setModalInfo({ modalName: 'GUIDE' })}>
-          가이드</span>
+            onClick={() => setModalInfo({ modalName: 'LOGOUT' })}>
+            로그아웃
+          </span>
+        </div>
       </header>
     </div>
   );
