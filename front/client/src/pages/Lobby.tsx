@@ -31,18 +31,11 @@ function Lobby() {
 
   return (
     <div className='lobby'>
-      <div className='titleFrame'>
-        <div id='lobbyTitle'>Lobby</div>
-      <div className='lobbySpace'></div>
-        <button onClick={openGameModal} id='gameStart'>
-          Game Start
-        </button>
-      </div>
-
-      <div className='channelList'>
-
-        <ChannelList />
-      </div>
+      <div id='lobbyTitle'>Lobby</div>
+      <button onClick={openGameModal} id='gameStart'>
+        Game Start
+      </button>
+      <ChannelList />
     </div>
   );
 }
