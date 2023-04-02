@@ -1,0 +1,17 @@
+.frame {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    min-width: 1000px;
+    width: 65vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+}
+
+body {
+    background-image: url("../../..//public/background.png");
+}

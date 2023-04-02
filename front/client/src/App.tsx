@@ -9,29 +9,32 @@ import UserPage from 'pages/Users';
 import Lobby from 'pages/Lobby';
 import Game from 'pages/Game';
 import Error404 from 'pages/Error404';
+import Frame from 'components/layout/Frame';
 
 function App() {
   return (
     <>
       <RecoilRoot>
         <Router>
-          <LoginChecker>
-            <ErrorChecker>
-              <Layout>
-                <Routes>
-                  <Route path='/ranking' element={<Rank />} />
-                  <Route
-                    path='/users/:nickName/mypage'
-                    element={<UserPage />}
-                  />
-                  <Route path='/' element={<Lobby />} />
-                  <Route path='/channel/:channelId' element={<Game />} />
-                  <Route path='*' element={<Error404 />} />
-                </Routes>
-              </Layout>
-              <ModalProvider />
-            </ErrorChecker>
-          </LoginChecker>
+          <Frame>
+            <LoginChecker>
+              <ErrorChecker>
+                <Layout>
+                  <Routes>
+                    <Route path='/ranking' element={<Rank />} />
+                    <Route
+                      path='/users/:nickName/mypage'
+                      element={<UserPage />}
+                    />
+                    <Route path='/' element={<Lobby />} />
+                    <Route path='/channel/:channelId' element={<Game />} />
+                    <Route path='*' element={<Error404 />} />
+                  </Routes>
+                </Layout>
+                <ModalProvider />
+              </ErrorChecker>
+            </LoginChecker>
+          </Frame>
         </Router>
       </RecoilRoot>
     </>
