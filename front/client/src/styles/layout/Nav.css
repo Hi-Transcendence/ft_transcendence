@@ -16,8 +16,10 @@
 
 }
 .flex3 {
-  flex : 5;
+  flex : 6;
   text-align: right;
+  /* text-align: center; */
+
 }
 
 .navButton {
