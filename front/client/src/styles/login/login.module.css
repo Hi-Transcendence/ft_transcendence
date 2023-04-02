@@ -2,10 +2,6 @@
   display: flex;
   height: 100vh;
   position: relative;
-  background-image: url('../../../public/piscine.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -20,22 +16,18 @@
 }
 
 .title {
-  color: #fff;
-  letter-spacing: 0.1rem;
-  font-size: 6rem;
-  font-weight: 700;
-  padding-bottom: 5rem;
+  width : 60vw;
 }
 
-.buttons {
-  all: unset;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  background: linear-gradient(to bottom, #49fcff, #009194);
-  width: 13rem;
-  height: 3.5rem;
+.text {
   color: white;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-align: center;
+  font-size: 2rem;
+}
+
+.text:hover {
+  cursor: pointer;
+  background: linear-gradient(to top, #861616, #fffb00);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 2rem;
 }

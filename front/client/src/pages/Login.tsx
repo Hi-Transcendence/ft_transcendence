@@ -12,12 +12,13 @@ function Login() {
   return (
     <div className={styles.loginContainer}>
       <div className={styles.innerContainer}>
-        <div className={styles.title}>{'ft_transcendence'}</div>
+        <img className={styles.title} src="/title.png"></img>
         <a
           href={`${process.env.REACT_APP_SERVERIP}/oauth/42`}
           style={{ textDecoration: 'none' }}
         >
-          <input type='button' className={styles.buttons} value='로그인' />
+          <text className={styles.text}>로그인</text>
+          {/* <input type='button' className={styles.buttons} value='로그인' /> */}
         </a>
 
         <br />
@@ -25,7 +26,8 @@ function Login() {
           href={`${process.env.REACT_APP_SERVERIP}/oauth/test`}
           style={{ textDecoration: 'none' }}
         >
-          <input type='button' className={styles.buttons} value='게스트 로그인' />
+          <text className={styles.text}>게스트 로그인</text>
+          {/* <input type='button' className={styles.buttons} value='게스트 로그인' /> */}
         </a>
       </div>
     </div>
