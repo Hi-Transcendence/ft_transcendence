@@ -26,7 +26,7 @@
 
 .text:hover {
   cursor: pointer;
-  background: linear-gradient(to top, #861616, #fffb00);
+  background: linear-gradient(to top, #db6b5c, #ecd189);
   color: transparent;
   -webkit-background-clip: text;
   font-size: 2rem;

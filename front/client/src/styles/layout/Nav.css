@@ -1,49 +1,18 @@
 .nav {
-  background-color: #292d39;
   height: 8vh;
   width: 100%;
 }
 
-#logo {
-  margin-top: 1vh;
-  margin-left: 1vw;
-  height: 6vh;
-  width: auto;
-  float: left;
-}
-
-#guide {
-  margin-top: 1vh;
-  margin-right: 1vw;
+.navButton
+{
+  color: white;
+  font-size: 1.5rem;
   float: right;
-  height: 6vh;
+  margin: 2%;
   cursor: pointer;
-  filter: invert(100%);
 }
+  
 
-#ranking {
-  margin-top: 1vh;
-  margin-right: 1vw;
-  float: right;
-  height: 6vh;
-  filter: invert(100%);
-}
-
-#avatar-image {
-  margin-top: 1vh;
-  margin-right: 1vw;
-  float: right;
-  height: 6vh;
-  width: auto;
-  border: solid 1px white;
-  border-radius: 50%;
-}
-
-#logout {
-  margin-top: 1vh;
-  margin-right: 1vw;
-  float: right;
-  height: 6vh;
-  filter: invert(100%);
-  cursor: pointer;
+.home {
+  float : left
 }

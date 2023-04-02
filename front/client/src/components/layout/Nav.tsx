@@ -33,48 +33,32 @@ function Nav(props: { nickName: string; avatar: string }) {
     <div>
       <header className='nav'>
         <Link to='/'>
-          <img
-            src='/42.png'
-            width='80vw'
-            alt='logoImg'
-            id='logo'
-            onClick={movePage}
-          />
+          <span
+            className='navButton home'
+            onClick={movePage}>
+              홈
+          </span>
         </Link>
-        <div>
-          <img
-            src='/logout.png'
-            alt='logoutImg'
-            id='logout'
-            onClick={() => setModalInfo({ modalName: 'LOGOUT' })}
-          />
-        </div>
+        <span
+          className='navButton'
+          onClick={() => setModalInfo({ modalName: 'LOGOUT' })}>
+          로그아웃
+        </span>
         <Link to={`/users/${props.nickName}/mypage`}>
-          <img
-            src={props.avatar}
-            height='60vh'
-            width='75vw'
-            alt='avatar'
-            id='avatar-image'
-            onClick={movePage}
-          />
+          <span
+            className='navButton'
+            onClick={movePage}>
+          마이페이지</span>
         </Link>
         <Link to='/ranking'>
-          <img
-            src='/ranking.png'
-            alt='rankImg'
-            id='ranking'
-            onClick={movePage}
-          />
+          <span
+            className='navButton'
+            onClick={movePage}>랭킹</span>
         </Link>
-        <div>
-          <img
-            src='/guide.png'
-            alt='guidImg'
-            id='guide'
-            onClick={() => setModalInfo({ modalName: 'GUIDE' })}
-          />
-        </div>
+        <span
+          className='navButton'
+          onClick={() => setModalInfo({ modalName: 'GUIDE' })}>
+          가이드</span>
       </header>
     </div>
   );

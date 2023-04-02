@@ -22,9 +22,6 @@
   display: flex;
   align-items: center;
 }
-a:visited {
-  color: #00babc;
-}
 
 .matchLeft {
   flex: 1;
