@@ -3,7 +3,8 @@
     justify-content: center;
     align-items: center; */
 
-    min-width: 1000px;
+    min-width: 900px;
+    height: 100%;
     width: 65vw;
     position: absolute;
     left: 50%;

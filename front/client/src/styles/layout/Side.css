@@ -1,11 +1,14 @@
 .side {
-  background-color: rgb(255, 255, 255);
-  border: 2px #00babc solid;
+  background-color: rgb(0, 0, 0);
+  /* border: 2px #00babc solid; */
   box-sizing: border-box;
   float: right;
   height: 92vh;
   width: 17vw;
   min-width: 150px;
+  color: white;
+  margin-right: 2rem;
+
 }
 
 .userContainer {
@@ -15,7 +18,10 @@
 }
 
 .userTitle {
-  background-color: #00babc;
+  border: 0.6rem white double;
+  border-radius: 15px;
+
+  /* background-color: #00babc; */
   height: 3.5vh;
   min-height: 40px;
   color: white;
@@ -27,6 +33,10 @@
 }
 
 .users {
+  border: 0.6rem white double;
+  border-radius: 15px;
+
+  height: 100%;
   overflow-y: scroll;
   position: sticky;
   padding-left: 5%;
@@ -51,7 +61,9 @@
 }
 
 .chatTiTle {
-  background-color: #00babc;
+  border: 0.6rem white double;
+  border-radius: 15px;
+  /* background-color: #00babc; */
   height: 3.5vh;
   min-height: 40px;
   color: white;
@@ -63,6 +75,8 @@
 }
 
 .chat {
+  border: 0.6rem white double;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   height: 45.5vh;
@@ -103,21 +117,34 @@
   min-width: 130px;
 }
 .message {
-  height: 2rem;
+  height: 3rem;
   width: 75%;
-  border: 1px #00babc solid;
+  border: 0.6rem white double;
+  background-color: transparent;
+  /* border: 1px #00babc solid; */
+  border-radius: 10px;
   box-sizing: border-box;
   font-size: 1.25rem;
+  color: white;
 }
 
 .button {
-  height: 2rem;
+  height: 3rem;
   width: 25%;
-  border: 1px #00babc solid;
+
+
+  /* border: 1px transparent solid; */
+  border-color: transparent;
+
   box-sizing: border-box;
-  background-color: #00babc;
+  background-color: transparent;
+  
   color: white;
   font-size: 1rem;
+  border: 0.6rem white double;
+  border-radius: 10px;
+
+
 }
 
 .userlist-row {
