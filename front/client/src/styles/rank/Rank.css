@@ -54,12 +54,3 @@ h1 {
   flex: 1;
   text-align: center;
 }
-
-a:link {
-  color: #00babc;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #006d6f;
-}
