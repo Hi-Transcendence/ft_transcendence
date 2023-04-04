@@ -41,8 +41,14 @@ function ChannelListRow({ props }: { props: channelTypes }) {
           </span>
         </Link>
       )}
-      <span className='rowElseElement'>player1 : {player1} </span>
-      <span className='rowElseElement'>player2 : {player2} </span>
+      <span className='rowElseElement'> 
+        <span className='Player1'>P1</span>  
+        {player1} 
+      </span>
+      <span className='rowElseElement'> 
+        <span className='Player2'>P2</span>  
+        {player2} 
+      </span>
       <span className='blank'></span>
       <span className='rowElseElement'>
         비밀방 :{password ? <span>🔒</span> : <></>}
