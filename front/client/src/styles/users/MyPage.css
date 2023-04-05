@@ -1,15 +1,14 @@
 .my-page {
   border: 0.6rem white double;
   border-radius: 10px;
-  
+
   width: 42vw;
   margin-left: 2%;
   margin-right: 2%;
-  padding : 2%;
+  padding: 2%;
 }
 
 #list {
-  border: 2px solid greenyellow;
   display: flex;
   margin: 2%;
   height: 50%;

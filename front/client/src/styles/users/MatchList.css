@@ -1,23 +1,25 @@
 .matchList {
-  border: 1px solid red;
   width: 50%;
   flex: 1;
   padding-left: 2%;
   padding-right: 2%;
 }
 .matchTitle {
-  font-size: larger;
+  font-size: 1.7rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: white;
 }
-.matchTable {
-  border: 1px #00babc solid;
 
-  color: black;
+.matchTable {
+  border: 0.2rem white solid;
+  border-radius: 15px;
   overflow-y: scroll;
   height: 40vh;
 }
+
 .matchRow {
+  color: white;
   font-size: 1.25rem;
   height: 15%;
   display: flex;
@@ -25,13 +27,31 @@
 }
 
 .matchLeft {
-  flex: 1;
+  flex: 3;
 }
+
+.matchLeft:hover {
+  cursor: pointer;
+  background: linear-gradient(to top, #db6b5c, #ecd189);
+  color: transparent;
+  -webkit-background-clip: text;
+  border-color: transparent;
+}
+
 .matchMiddle {
-  flex: 1;
+  flex: ;
+  color: #ff0000;
   font-weight: bold;
 }
 
 .matchRight {
-  flex: 1;
+  flex: 3;
+}
+
+.matchRight:hover {
+  cursor: pointer;
+  background: linear-gradient(to top, #db6b5c, #ecd189);
+  color: transparent;
+  -webkit-background-clip: text;
+  border-color: transparent;
 }
