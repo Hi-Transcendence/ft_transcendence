@@ -1,4 +1,6 @@
 .friendList {
+  border: 1px solid red;
+
   width: 50%;
   flex: 1;
   padding-left: 2%;

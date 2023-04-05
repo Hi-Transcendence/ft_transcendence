@@ -1,14 +1,11 @@
 .side {
   background-color: rgb(0, 0, 0);
-  /* border: 2px #00babc solid; */
   box-sizing: border-box;
   float: right;
   height: 92vh;
   width: 17vw;
   min-width: 150px;
   color: white;
-  margin-right: 2rem;
-
 }
 
 .userContainer {

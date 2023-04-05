@@ -1,24 +1,51 @@
 .user-info {
   padding: 2%;
   margin: 2%;
-  height: 25vh;
+  padding-bottom: 0%;
+  height: 27vh;
   display: flex;
-  color: black;
+  color: white;
+  font-size: 1.7rem;
 }
 
 .user-info-line {
-  font-size: large;
   height: 5vh;
+  margin: 1%;
 }
 .user-label {
   font-weight: bold;
   width: 100%;
 }
+.cyanColor {
+  color: cyan;
+}
+.redColor {
+  color: red;
+}
+.greenColor {
+  color: rgb(0, 255, 0);
+}
+
+.changeButton {
+  all: none;
+  height: 2rem;
+  font-size: 1.25rem;
+  color: white;
+  border: 0.2rem white solid;
+  border-radius: 7px;
+  background-color: transparent;
+}
+.imageButton {
+  margin-top: 5%;
+  width: 17.5vh;
+}
+.nickButton {
+  margin-left: 5%;
+}
 
 #user-info-left {
   flex: 2;
-  text-align: center;
-  padding: 1%;
+  text-align: left;
   overflow: hidden;
 }
 #user-info-right {
@@ -27,15 +54,15 @@
 }
 
 #user-avatar {
-  height: 18vh;
-  width: 15vw;
+  height: 20vh;
+  width: 17.5vh;
   object-fit: cover;
 }
-.changeButton {
-  all: none;
-  height: 2rem;
-  font-size: 1rem;
-  background-color: #00babc;
-  color: white;
-  border: none;
+
+.user-info-right-top {
+  height: 20vh;
+}
+
+.user-info-right-down {
+  text-align: right;
 }
