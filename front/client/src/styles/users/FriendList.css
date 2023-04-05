@@ -5,25 +5,35 @@
   padding-right: 2%;
 }
 .friendTitle {
-  font-size: larger;
+  font-size: 1.7rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: white;
 }
 .friendTable {
-  border: 1px #00babc solid;
-  color: black;
+  border: 0.2rem white solid;
+  border-radius: 15px;
   overflow-y: scroll;
   height: 40vh;
 }
 .friendRow {
+  color: white;
   font-size: 1.25rem;
   height: 15%;
   display: flex;
   align-items: center;
 }
 .friendNickname:visited {
-  color: #00babc;
+  color: #fff;
 }
+.friendNickname:hover {
+  cursor: pointer;
+  background: linear-gradient(to top, #db6b5c, #ecd189);
+  color: transparent;
+  -webkit-background-clip: text;
+  border-color: transparent;
+}
+
 .friendNickname {
   flex: 5;
   text-align: left;
@@ -37,9 +47,17 @@
 }
 
 .friendButton {
-  width: 7rem;
-  font-size: 1.25rem;
-  background-color: #00babc;
+  width: 5.5rem;
+  font-size: 1rem;
   color: white;
+  /* color: #ffff00; */
+  background-color: black;
   border: none;
+}
+.friendButton:hover {
+  cursor: pointer;
+  background: linear-gradient(to top, #db6b5c, #ecd189);
+  color: transparent;
+  -webkit-background-clip: text;
+  border-color: transparent;
 }

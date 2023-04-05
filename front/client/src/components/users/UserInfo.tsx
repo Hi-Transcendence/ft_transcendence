@@ -96,68 +96,87 @@ function UserInfo() {
   };
 
   return (
-    <div className='user-info'>
-      <div id='user-info-left'>
-        <img src={profileData?.avatar} id='user-avatar' alt='프로필사진'></img>
-        <div>
-          {myData.nickName === profileData.nickName ? (
-            <button onClick={openAvatarModal} className='changeButton'>
-              change
-            </button>
-          ) : null}
-        </div>
-      </div>
-      <div id='user-info-right'>
-        <div className='user-info-line'>
-          <span className='user-label'>intraID </span>
-          <span>{profileData?.intraId}</span>
-        </div>
-        <div className='user-info-line'>
-          <span className='user-label'>nickname </span>
-          <span> {profileData?.nickName}</span>
-          {myData.nickName === profileData.nickName ? (
-            <button onClick={openNickModal} className='changeButton'>
-              change
-            </button>
-          ) : null}
-        </div>
-        <div className='user-info-line'>
-          <span>{profileData.win} </span>
-          <span>win </span>
-          <span>{profileData.lose} </span>
-          <span>lose </span>
-          <span>winRate : </span>
-          <span>{profileData.winRate} </span>
+    <div>
+      <div className="user-info">
+        <div id="user-info-left">
+          <img
+            src={profileData?.avatar}
+            onError={({ currentTarget }) => {
+              currentTarget.onerror = null;
+              currentTarget.src = '/default_avatar.png';
+            }}
+            id="user-avatar"
+            alt="프로필사진"
+          ></img>
           <div>
+            {myData.nickName === profileData.nickName ? (
+              <button
+                onClick={openAvatarModal}
+                className="changeButton imageButton"
+              >
+                이미지변경
+              </button>
+            ) : null}
+          </div>
+        </div>
+        <div id="user-info-right">
+          <div className="user-info-right-top">
+            <div className="user-info-line">
+              <span className="user-label">인트라ID </span>
+              <span>{profileData?.intraId}</span>
+            </div>
+            <div className="user-info-line">
+              <span className="user-label">닉네임 </span>
+              <span> {profileData?.nickName}</span>
+              {myData.nickName === profileData.nickName ? (
+                <button
+                  onClick={openNickModal}
+                  className="changeButton nickButton"
+                >
+                  변경
+                </button>
+              ) : null}
+            </div>
+            <div className="user-info-line">
+              <span className="cyanColor">승 </span>
+              <span>{profileData.win} </span>
+              <span className="redColor">패 </span>
+              <span>{profileData.lose} </span>
+              <span className="greenColor">승률 </span>
+              <span>{profileData.winRate} </span>
+
+              {profileData?.nickName !== myData.nickName ? (
+                <div>
+                  {profileData?.isFriend === false ? (
+                    <button className="changeButton" onClick={addFriend}>
+                      친구 추가
+                    </button>
+                  ) : (
+                    <button className="changeButton" onClick={delFriend}>
+                      친구 제거
+                    </button>
+                  )}
+                </div>
+              ) : (
+                <></>
+              )}
+            </div>
+          </div>
+          <div className="user-info-right-down">
             {profileData?.nickName === myData.nickName && (
               <>
                 {myData.enable2FA === true ? (
-                  <button onClick={offEnable2FA} className='changeButton'>
+                  <button onClick={offEnable2FA} className="changeButton">
                     2차인증항상끄기
                   </button>
                 ) : (
-                  <button onClick={onEnable2FA} className='changeButton'>
+                  <button onClick={onEnable2FA} className="changeButton">
                     2차인증항상하기
                   </button>
                 )}
               </>
             )}
           </div>
-          {profileData?.nickName !== myData.nickName ? (
-            <div>
-              {profileData?.isFriend === false ? (
-                <button className='changeButton' onClick={addFriend}>
-                  친구 추가
-                </button>
-              ) : (
-                <button className='changeButton' onClick={delFriend}>
-                  친구 제거
-                </button>
-              )}
-            </div>
-          ) : (
-            <></>
-          )}
         </div>
       </div>
     </div>

@@ -23,9 +23,7 @@ function App() {
                   <Routes>
                     <Route path='/ranking' element={<Rank />} />
                     <Route
-                      path='/users/:nickName/mypage'
-                      element={<UserPage />}
-                    />
+                      path='/users/:nickName/mypage' element={<UserPage />}/>
                     <Route path='/' element={<Lobby />} />
                     <Route path='/channel/:channelId' element={<Game />} />
                     <Route path='*' element={<Error404 />} />
