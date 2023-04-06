@@ -171,15 +171,16 @@ function GameModule(props: { gameMode: string }) {
         width="700px"
         id="game-layer"
       />
-      <canvas />
       <div id="ping-message">ping : {pingTime}</div>
       <div id="guide-message">
         <div className="guide-message-title">게임 방법</div>
-        마우스를 움직여 패들을 조작할 수 있습니다.
-        <br />
-        패들을 이용해 공을 튕겨내 상대방이 받아치지 못하면 점수를 얻습니다.
-        <br />
-        먼저 10점을 달성하는 사람이 승리합니다.
+        <div className="guide-message-content">
+          마우스를 움직여 패들을 조작할 수 있습니다.
+          <br />
+          패들을 이용해 공을 튕겨내 상대방이 받아치지 못하면 점수를 얻습니다.
+          <br />
+          먼저 10점을 달성하는 사람이 승리합니다.
+        </div>
       </div>
     </div>
   );
