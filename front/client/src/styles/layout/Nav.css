@@ -5,21 +5,16 @@
   align-items: center;
 }
 
-
 .flex1 {
   flex: 1;
   text-align: center;
-
 }
 .flex2 {
   flex: 3;
-
 }
 .flex3 {
-  flex : 6;
+  flex: 6;
   text-align: right;
-  /* text-align: center; */
-
 }
 
 .navButton {
@@ -27,6 +22,14 @@
   font-size: 2rem;
   margin: 2%;
   cursor: pointer;
+}
+
+.navButton:hover {
+  cursor: pointer;
+  background: linear-gradient(to top, #db6b5c, #ecd189);
+  color: transparent;
+  -webkit-background-clip: text;
+  border-color: transparent;
 }
 
 .home {
