@@ -1,11 +1,14 @@
 @font-face {
   font-family: 'DungGeunMo';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff')
+    format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
-body, input, button {
+body,
+input,
+button {
   margin: 0;
   font-family: 'DungGeunMo', sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,19 +1,28 @@
 .rank {
-  background-color: #ffffff;
-  width: 100%;
-  height: 100%;
-
+  /* background-color: #ffffff;
+  
   margin-top: 2%;
   margin-left: 1%;
   margin-right: 1%;
-  margin-bottom: 2%;
+  margin-bottom: 2%; */
+  border: 0.6rem white double;
+  border-radius: 10px;
+
+  width: 42vw;
+  /* height: 100%; */
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 2%;
 }
 
 #rank-title {
+  text-shadow: -3px 3px #00babc, 0 3px #00babc, 3px 0 #00babc, 0 -3px #00babc;
+
   text-align: center;
-  font-size: xx-large;
+  font-size: 8rem;
   font-weight: bold;
-  margin-top: 1.5%;
+
+  /* margin-top: 1.5%; */
   margin-left: 1%;
   margin-right: 1%;
   margin-bottom: 2%;
@@ -27,18 +36,18 @@ h1 {
   margin-right: 2%;
   color: black;
   overflow-y: scroll;
-  height: 80%;
+  height: 70vh;
   font-size: 1.25rem;
 }
 
 .rank-row {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   display: flex;
   height: 2rem;
   align-items: center;
 }
 .rank-row-gray {
-  background-color: #d9d9d9;
+  /* background-color: #d9d9d9; */
   display: flex;
   height: 2rem;
   align-items: center;
@@ -53,4 +62,14 @@ h1 {
 .rank-cell {
   flex: 1;
   text-align: center;
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.rank-cell.nickName:hover {
+  cursor: pointer;
+  background: linear-gradient(to top, #db6b5c, #ecd189);
+  color: transparent;
+  -webkit-background-clip: text;
+  border-color: transparent;
 }
