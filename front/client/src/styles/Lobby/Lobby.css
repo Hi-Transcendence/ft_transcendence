@@ -4,16 +4,10 @@
   height: 100%;
   margin: 2rem;
   margin-top: 0;
-  /* padding-right: 3rem;  */
-
-  /* padding: 0; */
-  /* padding-left: 1%;
-  */
 }
 
 .channelListRow {
   display: block;
-  /* border: 1px #00babc solid; */
   color: black;
   height: 8vh;
   width: 100%;
@@ -29,7 +23,6 @@
 .rowFirstElement {
   flex: 3;
   height: 100%;
-  /* background-color: #00babc; */
   color: white;
   font-weight: bold;
   text-align: center;
@@ -63,60 +56,30 @@
   margin-right: 1rem;
 }
 
-/* .blank {
-  flex: 2;
-} */
-
 .titleFrame {
   flex-direction: row;
   display: flex;
 }
 
 #lobbyTitle {
-  /* color: white;
-  text-align: center;
-  font-size: xx-large;
-  font-weight: bold;
-  padding-top: 2%; */
-  /* color: #00babc; */
   text-shadow: -3px 3px #00babc, 0 3px #00babc, 3px 0 #00babc, 0 -3px #00babc;
   text-align: left;
   font-size: 10rem;
   font-weight: bold;
-  margin-top: 1.5%;
-  /* margin-left: 2rem; */
-  /* margin-right: 1%; */
+  margin-top: -1.5%;
   margin-bottom: 2rem;
   flex: 1;
-  /* border: 1px white solid; */
 }
 
 #gameStart {
-  /* all: unset;
-  width: 7rem;
-  height: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  background-color: #00babc;
-  color: white; */
-
   all: unset;
   width: 10rem;
   height: 5rem;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  /* background-color: #00babc; */
   color: white;
-  /* margin-right: 2rem; */
-
-  font-size: xx-large;
-
+  font-size: 2rem;
   flex: 1;
-
-  border-style: double;
-  border-width: 0.6rem;
+  border: white 0.6rem double;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -126,11 +89,8 @@
 
 .channelList {
   color: white;
-  /* margin: 2rem; */
   border: 0.6rem white double;
   border-radius: 10px;
 
   height: 69vh;
-  /* margin: 3rem; */
-  /* width: 100%; */
 }
