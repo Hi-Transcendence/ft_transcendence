@@ -39,7 +39,6 @@
   align-items: center;
 }
 
-
 .rowElseElement {
   flex: 3;
   height: 100%;
@@ -49,33 +48,28 @@
   text-align: center;
   align-items: center;
 
-
   color: #fff;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.rowElseElement .Player1{
+.rowElseElement .Player1 {
   color: red;
   margin-right: 1rem;
-
 }
 
-.rowElseElement .Player2{
+.rowElseElement .Player2 {
   color: rgb(70, 230, 70);
   margin-right: 1rem;
 }
-
 
 /* .blank {
   flex: 2;
 } */
 
-.titleFrame{
-
+.titleFrame {
   flex-direction: row;
   display: flex;
-
 }
 
 #lobbyTitle {
@@ -97,7 +91,6 @@
   /* border: 1px white solid; */
 }
 
-
 #gameStart {
   /* all: unset;
   width: 7rem;
@@ -117,7 +110,7 @@
   /* background-color: #00babc; */
   color: white;
   /* margin-right: 2rem; */
-  
+
   font-size: xx-large;
 
   flex: 1;
@@ -125,23 +118,19 @@
   border-style: double;
   border-width: 0.6rem;
   text-align: center;
-
 }
 
-.lobbySpace{
+.lobbySpace {
   flex: 1;
-
 }
 
-.channelList{
-
-
+.channelList {
   color: white;
   /* margin: 2rem; */
   border: 0.6rem white double;
   border-radius: 10px;
 
-  height: 65vh;
+  height: 69vh;
   /* margin: 3rem; */
   /* width: 100%; */
 }

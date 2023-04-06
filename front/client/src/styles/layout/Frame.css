@@ -1,18 +1,19 @@
 .frame {
-    /* display: flex;
+  /* display: flex;
     justify-content: center;
     align-items: center; */
 
-    min-width: 900px;
-    height: 100%;
-    width: 65vw;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: black;
+  min-width: 900px;
+  height: 100%;
+  width: 65vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
 }
 
 body {
-    background-image: url("../../..//public/background.png");
+  background-image: url('../../..//public/background.png');
+  background-size: 120%;
 }
