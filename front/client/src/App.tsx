@@ -21,18 +21,20 @@ function App() {
               <ErrorChecker>
                 <Layout>
                   <Routes>
-                    <Route path='/ranking' element={<Rank />} />
+                    <Route path="/ranking" element={<Rank />} />
                     <Route
-                      path='/users/:nickName/mypage' element={<UserPage />}/>
-                    <Route path='/' element={<Lobby />} />
-                    <Route path='/channel/:channelId' element={<Game />} />
-                    <Route path='*' element={<Error404 />} />
+                      path="/users/:nickName/mypage"
+                      element={<UserPage />}
+                    />
+                    <Route path="/" element={<Lobby />} />
+                    <Route path="/channel/:channelId" element={<Game />} />
+                    <Route path="*" element={<Error404 />} />
                   </Routes>
                 </Layout>
-                <ModalProvider />
               </ErrorChecker>
             </LoginChecker>
           </Frame>
+          <ModalProvider />
         </Router>
       </RecoilRoot>
     </>
