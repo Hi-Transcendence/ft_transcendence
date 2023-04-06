@@ -28,21 +28,18 @@ function GameModule(props: { gameMode: string }) {
         ctx.drawImage(image, 0, 0, width, height);
       };
     } else if (img === 'power') {
-      ctx.fillStyle = 'black';
+      ctx.fillStyle = 'white';
       ctx.fillRect(0, 0, width, height);
       draw_text(ctx, 'POWER!', Math.floor(width / 2), 50);
     } else {
-      ctx.fillStyle = 'black';
+      ctx.fillStyle = 'white';
       ctx.fillRect(0, 0, width, height);
     }
   }
 
   function draw_ball(ctx: CanvasRenderingContext2D, x: number, y: number) {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.floor(Math.PI * 2));
-    ctx.fillStyle = 'white';
-    ctx.fill();
-    ctx.closePath();
+    ctx.fillStyle = 'black';
+    ctx.fillRect(x, y, 10, 10);
   }
 
   function draw_paddle(
@@ -52,7 +49,7 @@ function GameModule(props: { gameMode: string }) {
     width: number,
     height: number
   ) {
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = 'black';
     ctx.fillRect(x, y, width, height);
   }
 
@@ -63,8 +60,8 @@ function GameModule(props: { gameMode: string }) {
     height: number
   ) {
     ctx.textAlign = 'center';
-    ctx.font = '40pt pira';
-    ctx.fillStyle = 'white';
+    ctx.font = '40pt DungGeunMo';
+    ctx.fillStyle = 'black';
     ctx.strokeText(text, width, height);
     ctx.fillText(text, width, height);
   }
@@ -163,20 +160,22 @@ function GameModule(props: { gameMode: string }) {
     <div>
       <canvas
         ref={background}
-        height='350px'
-        width='700px'
-        id='background-layer'
+        height="350px"
+        width="700px"
+        id="background-layer"
       />
       <canvas
         ref={canvas}
-        height='350px'
-        width='700px'
         onMouseMove={saveMouseState}
-        id='game-layer'
+        height="350px"
+        width="700px"
+        id="game-layer"
       />
-      <div id='ping-message'>ping : {pingTime}</div>
-      <div id='guide-message'>
-        게임 방법 : 마우스를 움직여 패들을 조작할 수 있습니다.
+      <canvas />
+      <div id="ping-message">ping : {pingTime}</div>
+      <div id="guide-message">
+        <div className="guide-message-title">게임 방법</div>
+        마우스를 움직여 패들을 조작할 수 있습니다.
         <br />
         패들을 이용해 공을 튕겨내 상대방이 받아치지 못하면 점수를 얻습니다.
         <br />

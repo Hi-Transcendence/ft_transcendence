@@ -33,8 +33,7 @@ function Game() {
     setMatchWait(false);
     setChatList([]);
     setModalInfo({ modalName: null });
-    if (channelInfo.channelId === '')
-    {
+    if (channelInfo.channelId === '') {
       navigate('/');
     }
   }, []);
@@ -63,37 +62,40 @@ function Game() {
   };
 
   return (
-    <div style={{ width: '80vw' }}>
+    <div>
       {gameInfo.gameMode === '' ? (
         <></>
       ) : (
-        <div className='game-area'>
-          <div className='game-setting-area'>
+        <div className="game-area">
+          <div className="game-setting-area">
             {myData.owner && (
               <button
                 onClick={() => setModalInfo({ modalName: 'GAME-SETTING' })}
-                className='game-setting'
+                className="game-setting"
               >
                 Game Setting
               </button>
             )}
-            <Link to='/'>
-              <button className='game-setting' onClick={exitChannel}>
+            <Link to="/">
+              <button className="game-setting" onClick={exitChannel}>
                 나가기
               </button>
             </Link>
           </div>
-          <div className='player-game-area'>
-            <div className='player'>
+
+          <div className="player-info-area">
+            <div className="player">
               <div>Player1</div>
-              <div className='player-name'>{gameInfo.firstPlayer}</div>
+              <div className="player-name">{gameInfo.firstPlayer}</div>
             </div>
-            <div className='game-content'>
-              <GameModule gameMode={gameInfo.gameMode} />
-            </div>
-            <div className='player'>
+            <div className="player">
               <div>Player2</div>
-              <div className='player-name'>{gameInfo.secondPlayer}</div>
+              <div className="player-name">{gameInfo.secondPlayer}</div>
+            </div>
+          </div>
+          <div className="player-game-area">
+            <div className="game-content">
+              <GameModule gameMode={gameInfo.gameMode} />
             </div>
           </div>
         </div>

@@ -1,22 +1,23 @@
 .game-area {
-  background-color: white;
-  width: 80vw;
+  width: 100%;
+  height: 92vh;
+  color: white;
 }
 
 .player-game-area {
-  display: flex;
   align-items: center;
-  height: 55vh;
-  width: 80vw;
+  width: 100%;
 }
 .game-setting-area {
-  width: 75vw;
   text-align: right;
+}
+.player-info-area {
+  display: flex;
 }
 
 .player {
-  color: black;
   flex: 1;
+  font-size: 1.7rem;
   text-align: center;
 }
 .player-name {
@@ -24,43 +25,38 @@
 }
 
 .game-content {
-  flex: 5;
-  height: 100%;
   text-align: center;
+  position: relative;
 }
 
 .game-setting {
   all: unset;
-  height: 30%;
   padding: 1%;
   margin: 1%;
   font-size: 1rem;
-  background-color: #00babc;
   color: white;
+  border: 0.2rem white solid;
+  border-radius: 10px;
 }
 
-canvas {
-  position: absolute;
-  top: 17%;
-  left: 16%;
-  width: 50vw;
-  height: 50vh;
-}
 #background-layer {
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  z-index: 0;
 }
 #game-layer {
-  z-index: 2;
+  z-index: 1;
+  position: relative;
 }
 
 #ping-message {
-  position: absolute;
-  top: 70%;
-  left: 35%;
+  font-size: 1.7rem;
 }
 #guide-message {
-  position: absolute;
-  top: 75%;
   text-align: left;
-  color: black;
+  border: 0.2rem white solid;
+  border-radius: 10px;
+}
+.guide-message-title {
+  font-size: 1.7rem;
 }
